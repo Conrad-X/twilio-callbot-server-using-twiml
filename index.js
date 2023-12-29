@@ -173,7 +173,7 @@ app.post("/send-message", (req, res) => {
 app.post("/make-a-call", (req, res) => {
     client.calls
     .create({
-        url: process.env.CALL_REDIRECT_URL,
+        url: `${baseURL}/transcribe`,
         to: `+${process.env.TO_CALL_NUMBER}`, // Text your number
         from: `+${process.env.FROM_CALL_NUMBER}`, // From a valid Twilio number
     })
