@@ -1,0 +1,22 @@
+{
+  "name": "caller-bot",
+  "version": "1.0.0",
+  "description": "OpenAI powered phone caller bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "multer": "^1.4.5-lts.1",
+    "openai": "^4.24.1",
+    "twilio": "^4.20.0",
+    "websocket": "^1.0.34",
+    "ws": "^8.15.1"
+  }
+}
