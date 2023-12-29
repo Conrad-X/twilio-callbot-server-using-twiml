@@ -184,7 +184,8 @@ app.post("/make-a-call", (req, res) => {
 })
 
 app.get("/test", async (req, res) => {
-    const response = await generateAIResponse("Hello")
+    console.log("Success")
+    res.status(200).send("Success")
 })
 
 console.log("Listening on Port 8080");
