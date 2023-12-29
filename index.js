@@ -191,4 +191,4 @@ app.get("/", async (req, res) => {
 })
 
 console.log("Listening on Port 8080");
-server.listen(8080);
+server.listen(process.env.PORT || 5000);
