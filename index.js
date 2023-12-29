@@ -1,11 +1,8 @@
-const WebSocket = require("ws");
 const express = require("express");
 const OpenAI = require('openai');
 const app = express();
 const server = require("http").createServer(app);
-const wss = new WebSocket.Server({ server });
 
-const path = require("path");
 require("dotenv").config();
 
 const accountSid = process.env.TWILIO_ACCOUNT_SID;
@@ -186,6 +183,11 @@ app.post("/make-a-call", (req, res) => {
 app.get("/test", async (req, res) => {
     console.log("Success")
     res.status(200).send("Success")
+})
+
+app.get("/", async (req, res) => {
+    console.log("Working");
+    res.status(200).send("Working")
 })
 
 console.log("Listening on Port 8080");
