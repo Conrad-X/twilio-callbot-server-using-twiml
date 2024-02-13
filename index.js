@@ -155,5 +155,5 @@ app.get("/", async (req, res) => {
     res.status(200).send("Working")
 })
 
-console.log("Listening on Port 8080");
-server.listen(8080);
+console.log("Listening on Port 8800");
+server.listen(process.env.PORT || 8800)
