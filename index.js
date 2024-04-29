@@ -16,14 +16,10 @@ const VoiceResponse = require('twilio').twiml.VoiceResponse;
 
 const callingRouter = require('./src/routes/calling.route')
 
-// Initiating openAI
 const openai = new OpenAI({
     apiKey: process.env.OPENAI_API_KEY // This is the default and can be omitted
 });
-
-// Allow CORS
 app.use(cors())
-
 app.use('/call', callingRouter)
 
 app.use((err, req, res, next) => {
